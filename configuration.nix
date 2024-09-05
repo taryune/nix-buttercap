@@ -53,8 +53,17 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    docker
+    docker-compose
   ];
 
+  # Enable Docker
+  virtualisation.docker.enable = true;
+  virtualisation.docker.enableOnBoot = true;
+  virtualisation.docker.rootless = {
+    enable = true;
+    setSocketVariable = true;
+  };
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;

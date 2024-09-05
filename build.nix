@@ -3,6 +3,7 @@
     gcc
     cargo
     go
+    gnumake
     nodejs-slim
     nodePackages.pnpm
   ];

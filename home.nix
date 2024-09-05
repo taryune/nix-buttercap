@@ -18,6 +18,12 @@
     fzf
     lsd
     gh
+
+    # ssh
+    openssl
+
+    # dev
+    sgx-sdk
   ];
 
   programs.home-manager.enable = true;
