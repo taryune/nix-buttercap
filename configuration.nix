@@ -18,7 +18,7 @@
   boot.loader.grub.useOSProber = true;
 
   # Set your time zone.
-  time.timeZone = "Asia/Tokyo";
+  time.timeZone = "Europe/Amsterdam";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
@@ -43,10 +43,10 @@
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.taru = {
-    shell = pkgs.zsh;
     isNormalUser = true;
     description = "taru";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.zsh;
     packages = with pkgs; [];
   };
 
